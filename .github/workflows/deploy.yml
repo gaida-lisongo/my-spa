@@ -1,0 +1,72 @@
+name: Deploy to GitHub Pages
+
+# Déclenche l'action sur push vers main ou manuellement
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+# Permissions nécessaires pour GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Un seul déploiement à la fois
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Job de build et déploiement
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    
+    steps:
+    # 1. Récupérer le code
+    - name: Checkout
+      uses: actions/checkout@v4
+
+    # 2. Configurer Node.js (optionnel si vous voulez faire du build)
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    # 3. Installer les dépendances (si vous avez un package.json)
+    - name: Install dependencies
+      run: |
+        if [ -f package.json ]; then
+          npm ci
+        else
+          echo "Pas de package.json - déploiement direct des fichiers statiques"
+        fi
+
+    # 4. Build (optionnel - pour l'instant juste copier les fichiers)
+    - name: Build project
+      run: |
+        # Pour l'instant, on copie juste les fichiers
+        # Plus tard vous pourrez ajouter des étapes de build (minification, etc.)
+        echo "Build terminé - fichiers prêts pour le déploiement"
+
+    # 5. Configurer GitHub Pages
+    - name: Setup Pages
+      uses: actions/configure-pages@v4
+
+    # 6. Upload des artefacts
+    - name: Upload artifact
+      uses: actions/upload-pages-artifact@v2
+      with:
+        # Dossier à déployer (racine du projet)
+        path: '.'
+
+    # 7. Déployer vers GitHub Pages
+    - name: Deploy to GitHub Pages
+      id: deployment
+      uses: actions/deploy-pages@v3
