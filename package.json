@@ -1,0 +1,30 @@
+{
+  "name": "promotion-manager",
+  "version": "1.0.0",
+  "description": "Application SPA pour la gestion des promotions académiques",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 -c-1",
+    "dev": "npx http-server . -p 3000 -c-1 -o",
+    "build": "echo 'Build completed - ready for deployment'",
+    "deploy": "gh-pages -d ."
+  },
+  "keywords": [
+    "spa",
+    "javascript",
+    "bootstrap",
+    "education",
+    "promotion-management"
+  ],
+  "author": "Votre Nom",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "gh-pages": "^6.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votre-username/promotion-manager.git"
+  },
+  "homepage": "https://votre-username.github.io/promotion-manager"
+}
