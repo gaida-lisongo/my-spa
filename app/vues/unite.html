@@ -1,0 +1,187 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#promotions">🎓 Promotion Manager</a>
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#promotions">📚 Promotions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="#unites">📋 Unités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#elements">🧩 Éléments</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenu Unités -->
+<div class="container-fluid">
+    <div class="row g-4">
+        <div class="col-lg-12">
+            <!-- Header -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 class="h3 mb-1">📋 Gestion des Unités d'Enseignement</h2>
+                    <p class="text-muted mb-0">Organisez les unités par promotion</p>
+                </div>
+                <button class="btn btn-primary">➕ Nouvelle Unité</button>
+            </div>
+
+            <!-- Filtres -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option>Toutes les promotions</option>
+                                <option>L1 Informatique</option>
+                                <option>L2 Informatique</option>
+                                <option>L3 Informatique</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <select class="form-select">
+                                <option>Tous les semestres</option>
+                                <option>Semestre 1</option>
+                                <option>Semestre 2</option>
+                            </select>
+                        </div>
+                        <div class="col-md-4">
+                            <input type="text" class="form-control" placeholder="Rechercher une unité...">
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-outline-secondary w-100">🔍 Filtrer</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cards des unités -->
+            <div class="row">
+                <!-- Unité 1 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card h-100 shadow-sm border-start border-primary border-4">
+                        <div class="card-header bg-light d-flex justify-content-between">
+                            <h6 class="mb-0 fw-bold">Algorithmique & Structures</h6>
+                            <span class="badge bg-primary">S1</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <small class="text-muted">Code:</small>
+                                <span class="fw-bold">UE101</span>
+                            </div>
+                            <div class="mb-3">
+                                <small class="text-muted">Responsable:</small>
+                                <div class="d-flex align-items-center mt-1">
+                                    <div class="bg-success rounded-circle p-1 me-2 text-white" style="width: 24px; height: 24px; font-size: 12px; text-align: center;">
+                                        <small>JS</small>
+                                    </div>
+                                    <small>Dr. Jean Smith</small>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <small class="text-muted">Promotion:</small>
+                                <span class="badge bg-light text-dark">L1 Informatique</span>
+                            </div>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-success" style="width: 85%"></div>
+                            </div>
+                            <small class="text-muted">3/3 éléments configurés</small>
+                        </div>
+                        <div class="card-footer bg-light">
+                            <div class="btn-group w-100">
+                                <button class="btn btn-outline-primary btn-sm">👁️ Voir</button>
+                                <button class="btn btn-outline-secondary btn-sm">✏️ Modifier</button>
+                                <button class="btn btn-outline-danger btn-sm">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unité 2 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card h-100 shadow-sm border-start border-success border-4">
+                        <div class="card-header bg-light d-flex justify-content-between">
+                            <h6 class="mb-0 fw-bold">Base de Données</h6>
+                            <span class="badge bg-success">S2</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <small class="text-muted">Code:</small>
+                                <span class="fw-bold">UE201</span>
+                            </div>
+                            <div class="mb-3">
+                                <small class="text-muted">Responsable:</small>
+                                <div class="d-flex align-items-center mt-1">
+                                    <div class="bg-primary rounded-circle p-1 me-2 text-white" style="width: 24px; height: 24px; font-size: 12px; text-align: center;">
+                                        <small>ML</small>
+                                    </div>
+                                    <small>Prof. Marie Laurent</small>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <small class="text-muted">Promotion:</small>
+                                <span class="badge bg-light text-dark">L2 Informatique</span>
+                            </div>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-warning" style="width: 60%"></div>
+                            </div>
+                            <small class="text-muted">2/4 éléments configurés</small>
+                        </div>
+                        <div class="card-footer bg-light">
+                            <div class="btn-group w-100">
+                                <button class="btn btn-outline-primary btn-sm">👁️ Voir</button>
+                                <button class="btn btn-outline-secondary btn-sm">✏️ Modifier</button>
+                                <button class="btn btn-outline-danger btn-sm">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unité 3 -->
+                <div class="col-lg-6 col-xl-4 mb-4">
+                    <div class="card h-100 shadow-sm border-start border-info border-4">
+                        <div class="card-header bg-light d-flex justify-content-between">
+                            <h6 class="mb-0 fw-bold">Développement Web</h6>
+                            <span class="badge bg-info">S1</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <small class="text-muted">Code:</small>
+                                <span class="fw-bold">UE301</span>
+                            </div>
+                            <div class="mb-3">
+                                <small class="text-muted">Responsable:</small>
+                                <div class="d-flex align-items-center mt-1">
+                                    <div class="bg-info rounded-circle p-1 me-2 text-white" style="width: 24px; height: 24px; font-size: 12px; text-align: center;">
+                                        <small>PD</small>
+                                    </div>
+                                    <small>Dr. Paul Dupont</small>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <small class="text-muted">Promotion:</small>
+                                <span class="badge bg-light text-dark">L3 Informatique</span>
+                            </div>
+                            <div class="progress mb-2" style="height: 8px;">
+                                <div class="progress-bar bg-danger" style="width: 25%"></div>
+                            </div>
+                            <small class="text-muted">1/5 éléments configurés</small>
+                        </div>
+                        <div class="card-footer bg-light">
+                            <div class="btn-group w-100">
+                                <button class="btn btn-outline-primary btn-sm">👁️ Voir</button>
+                                <button class="btn btn-outline-secondary btn-sm">✏️ Modifier</button>
+                                <button class="btn btn-outline-danger btn-sm">🗑️</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

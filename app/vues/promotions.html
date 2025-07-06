@@ -1,0 +1,204 @@
+<!-- Navigation moderne -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+    <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="#promotions">
+            🎓 Promotion Manager
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#promotions">📚 Promotions</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#unites">📋 Unités</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#elements">🧩 Éléments</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Contenu principal -->
+<div class="container-fluid">
+    <div class="row g-4">
+        <!-- Zone principale -->
+        <div class="col-lg-8">
+            <!-- Header avec actions -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h3 mb-0">📚 Gestion des Promotions</h2>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createPromotionModal">
+                    ➕ Nouvelle Promotion
+                </button>
+            </div>
+
+            <!-- Statistiques -->
+            <div class="row mb-4">
+                <div class="col-md-3">
+                    <div class="card bg-primary text-white">
+                        <div class="card-body text-center">
+                            <h4 class="mb-0">12</h4>
+                            <small>Promotions actives</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-success text-white">
+                        <div class="card-body text-center">
+                            <h4 class="mb-0">45</h4>
+                            <small>Unités totales</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-info text-white">
+                        <div class="card-body text-center">
+                            <h4 class="mb-0">128</h4>
+                            <small>Éléments</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card bg-warning text-white">
+                        <div class="card-body text-center">
+                            <h4 class="mb-0">1,250</h4>
+                            <small>Étudiants</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tableau des promotions -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Liste des Promotions</h5>
+                        <div class="input-group" style="width: 300px;">
+                            <input type="text" class="form-control" placeholder="Rechercher...">
+                            <button class="btn btn-outline-secondary">🔍</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Désignation</th>
+                                    <th>Orientation</th>
+                                    <th>Système</th>
+                                    <th>Département</th>
+                                    <th>Statut</th>
+                                    <th class="text-end">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="d-flex align-items-center">
+                                            <div class="bg-primary rounded-circle p-2 me-3 text-white">
+                                                <small>L3</small>
+                                            </div>
+                                            <strong>Licence 3 Informatique</strong>
+                                        </div>
+                                    </td>
+                                    <td>Informatique & Technologies</td>
+                                    <td>
+                                        <span class="badge bg-success">LMD</span>
+                                    </td>
+                                    <td>Sciences Exactes</td>
+                                    <td>
+                                        <span class="badge bg-success">Actif</span>
+                                    </td>
+                                    <td class="text-end">
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary" title="Voir">👁️</button>
+                                            <button class="btn btn-outline-secondary" title="Modifier">✏️</button>
+                                            <button class="btn btn-outline-danger" title="Supprimer">🗑️</button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- Plus de lignes ici -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="card-footer bg-light">
+                    <nav>
+                        <ul class="pagination pagination-sm mb-0 justify-content-center">
+                            <li class="page-item disabled">
+                                <span class="page-link">Précédent</span>
+                            </li>
+                            <li class="page-item active">
+                                <span class="page-link">1</span>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">2</a>
+                            </li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Suivant</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sidebar -->
+        <div class="col-lg-4">
+            <!-- Actions rapides -->
+            <div class="card shadow-sm mb-4">
+                <div class="card-header bg-light">
+                    <h5 class="card-title mb-0">⚡ Actions Rapides</h5>
+                </div>
+                <div class="card-body">
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary">➕ Nouvelle Promotion</button>
+                        <button class="btn btn-success">📋 Nouvelle Unité</button>
+                        <button class="btn btn-info">🧩 Nouvel Élément</button>
+                        <hr>
+                        <button class="btn btn-outline-secondary">📊 Rapports</button>
+                        <button class="btn btn-outline-warning">⚙️ Paramètres</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Infos récentes -->
+            <div class="card shadow-sm">
+                <div class="card-header bg-light">
+                    <h5 class="card-title mb-0">📰 Activités Récentes</h5>
+                </div>
+                <div class="card-body">
+                    <div class="timeline">
+                        <div class="timeline-item mb-3">
+                            <div class="timeline-marker bg-success"></div>
+                            <div class="timeline-content">
+                                <small class="text-muted">Il y a 2h</small>
+                                <p class="mb-0">Promotion L3 Info créée</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item mb-3">
+                            <div class="timeline-marker bg-primary"></div>
+                            <div class="timeline-content">
+                                <small class="text-muted">Hier</small>
+                                <p class="mb-0">5 unités mises à jour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-light text-center py-3 mt-5">
+    <div class="container">
+        <p class="text-muted mb-0">&copy; 2025 Promotion Manager - Gestion académique moderne</p>
+    </div>
+</footer>
